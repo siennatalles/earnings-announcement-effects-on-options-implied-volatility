@@ -17,8 +17,10 @@ Implied volatility for near-term options is significantly higher than for far-te
 ## Contents
 
 - `earnings_iv_study.ipynb` — full analysis: data collection, ATM implied volatility computation, statistical testing, visualization, and the daily tracking pipeline
+- `iv_tracking_log.csv` — daily at-the-money implied volatility readings for the tracked options (snapshot through 2026-10-15)
+- `snapshot_config.csv` — the tickers, earnings dates, and option expirations locked in for daily tracking
 
-Note: the daily tracking pipeline appends to local log files that update continuously and aren't included in this repo. The relevant cells are here for reference; reproducing that part requires rerunning the pipeline yourself.
+Note: the daily tracking pipeline runs on a schedule and keeps appending to these two files locally, so the copies here are a point-in-time snapshot. The notebook pulls live option chains and earnings dates, so rerunning it will produce different numbers than the stored outputs.
 
 ## Tools
 
